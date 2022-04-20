@@ -10,8 +10,7 @@
     <title>{{ config('app.name', 'Dogemoon') }}</title>
 
     {{--    icon--}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -24,20 +23,22 @@
 {{--    <link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
 
 <!-- Bootstrap Css -->
-    <link href="{{asset('css/bootstrap.min.css')}}" id="bootstrap-style" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('css/bootstrap.min.css')}}" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
-    <link href="{{asset('css/icons.min.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('css/icons.min.css')}}" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
 
     <!-- App Css-->
-    <link href="{{asset('css/app.min.css')}}" id="app-style" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('css/app.min.css')}}" id="app-style" rel="stylesheet" type="text/css" />
 
     <!-- Sweet Alert-->
-    <link href="{{asset('libs/sweetalert2/sweetalert2.min.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('libs/sweetalert2/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- Alpine js-->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <script defer src="https://unpkg.com/alpinejs@3.10.1/dist/cdn.min.js"></script>
+
 </head>
 <body>
 
@@ -47,9 +48,7 @@
             <a class="navbar-brand" href="{{ url('/') }}">
                 {{ config('app.name', 'Dogemoon') }}
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -76,8 +75,7 @@
                         @endif
                     @else
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </a>
 
@@ -106,7 +104,9 @@
 
 @yield('javascript')
 
-@livewireStyles
+
+@livewireScripts
+
 
 <!-- JAVASCRIPT -->
 <script src="{{asset('libs/jquery/jquery.min.js')}}"></script>

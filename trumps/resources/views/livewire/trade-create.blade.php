@@ -50,9 +50,9 @@
         </div>
     </div>
 
-    <div class="row" x-data="{rate: @entangle('rate'),margin:@entangle('margin'),wallet:@entangle('wallet')}" >
+    <div class="row" x-data="{rate:@entangle('rate'),margin:@entangle('margin'),wallet:@entangle('wallet')}" >
         <div class="col-md-9">
-            <label for="margin" class="form-label">Margin Size (<span x-text="rate"></span>%)</label>
+            <label for="margin" class="form-label">Margin Size RM (<span x-text="rate"></span>%)</label>
             <input type="range" class="form-range @error('margin') is-invalid @enderror" id="margin"
                    x-model.number="margin" min="0" max="{{ $walletbalance->balance }}" name="margin"
                    value="{{ old('margin') }}" >
